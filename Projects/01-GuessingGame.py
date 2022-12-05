@@ -1,8 +1,10 @@
+import random   # Import the random module
+
 print("*********************************************")
 print("*************** Guessing Game ***************")
 print("*********************************************")
 
-secret_number = 91
+secret_number = random.randrange(1, 101)  # Generate a random number between 1 and 100
 guess_limit = 3
 round = 1
 
@@ -43,3 +45,4 @@ print("Game over!")
 # The range function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and ends at a specified number.
 # range(start, stop, [step])
 # Continue allows us to skip the rest of the code in the current iteration of the loop and continue with the next iteration.
+# Modules are Python files with a .py extension that contain functions you can include in your application.
