@@ -4,9 +4,10 @@ print("*********************************************")
 
 secret_number = 91
 guess_limit = 3
+round = 1
 
 while guess_limit > 0:
-    print("You have", guess_limit, "guesses left.")
+    print("Round {} of {}".format(round, guess_limit))
     guess = (input("Guess a number between 1 and 100: "))
 
     right_guess = int(guess) == secret_number
@@ -31,4 +32,4 @@ while guess_limit > 0:
 # Intends are important in Python. 
 # The code inside the if statement is indented, and the code outside the if statement is not indented.
 # elif is short for else if.
-# The while loop will keep running as long as the condition is true.
+# .format is a method that allows us to insert variables into strings.
