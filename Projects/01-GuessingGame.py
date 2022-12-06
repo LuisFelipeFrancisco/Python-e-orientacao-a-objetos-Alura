@@ -7,10 +7,11 @@ print("*********************************************")
 secret_number = random.randrange(1, 101)  # Generate a random number between 1 and 100
 guess_limit = 0
 round = 1
-points = 1000
+points = 1000 
 
-print("Select a difficulty level: ", secret_number)
+print("Select a difficulty level: ")
 difficulty_level = int(input("(1) Easy (2) Medium (3) Hard: "))
+
 if difficulty_level == 1:
     guess_limit = 20
 elif difficulty_level == 2:
@@ -30,8 +31,6 @@ for round in range(1, guess_limit + 1):
     above_guess = int(guess) > secret_number
     below_guess = int(guess) < secret_number
 
-    print ("Your guess is {}".format(guess))
-
     if right_guess:
         print("You guessed it!")
         print("You scored {} points!".format(points))
@@ -46,10 +45,9 @@ for round in range(1, guess_limit + 1):
                 print("You scored {} points!".format(points))
         elif below_guess:
             print("Too low!")
-            print("You lost! The secret number was {}".format(secret_number))
-            print("You scored {} points!".format(points))
-
-    guess_limit -= 1
+            if round == guess_limit:
+                print("You lost! The secret number was {}".format(secret_number))
+                print("You scored {} points!".format(points))
 
 print("Game over!")
 
