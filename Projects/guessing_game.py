@@ -1,14 +1,16 @@
 import random   # Import the random module
 
+
 def play():
     print("*********************************************")
     print("*************** Guessing Game ***************")
     print("*********************************************")
 
-    secret_number = random.randrange(1, 101)  # Generate a random number between 1 and 100
+    # Generate a random number between 1 and 100
+    secret_number = random.randrange(1, 101)
     guess_limit = 0
     round = 1
-    points = 1000 
+    points = 1000
 
     print("Select a difficulty level: ")
     difficulty_level = int(input("(1) Easy (2) Medium (3) Hard: "))
@@ -22,8 +24,8 @@ def play():
 
     for round in range(1, guess_limit + 1):
         print("Round {} of {}".format(round, guess_limit))
-        guess = int (input("Guess a number between 1 and 100: "))
-        
+        guess = int(input("Guess a number between 1 and 100: "))
+
         if guess < 1 or guess > 100:
             print("You must enter a number between 1 and 100")
             continue
@@ -51,6 +53,7 @@ def play():
                     print("You scored {} points!".format(points))
 
     print("Game over!")
+
 
 if __name__ == "__main__":
     play()

@@ -15,6 +15,6 @@ if game == 1:
 elif game == 2:
     print("Starting Hangman...")
     hangman_game.play()
-    
+
 
 # Modularity is the ability to break a program into smaller pieces that are easier to understand and maintain.

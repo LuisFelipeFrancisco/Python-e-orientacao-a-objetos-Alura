@@ -3,7 +3,7 @@ middle_word = "is"
 last_word = "fantastic"
 print(first_word, middle_word, last_word, sep="_", end="!\n")
 
-# Snake case is the standard for Python variables and functions. 
+# Snake case is the standard for Python variables and functions.
 # In snake case, all words are lowercase, and underscores separate words.
 
 # Separators and enders can be used to format the output of print statements.
@@ -20,7 +20,7 @@ country = 6.44
 print(type(country))
 print("I live in", country)
 
-#Dynamic typing in Python is a feature that allows you to reassign variables to different data types.
+# Dynamic typing in Python is a feature that allows you to reassign variables to different data types.
 
 first_name = "Felipe"
 last_name = "Ferreira"
