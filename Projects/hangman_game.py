@@ -1,11 +1,23 @@
+import random
+
 def play():
     print("*********************************************")
     print("**************** Hangman Game ***************")
     print("*********************************************")
     
-    secret_word = "banana".upper()
-    correct_letters = ["_", "_", "_", "_", "_", "_"]
+    file = open("words.txt", "r")
+    words = []
     
+    for line in file:
+        words.append(line.strip())
+    
+    file.close()
+    
+    number = random.randrange(0, len(words))
+
+    secret_word = words[number].upper()
+    correct_letters = ["_" for letter in secret_word]
+        
     hanged = False
     guessed = False
     tries = 6
@@ -50,3 +62,4 @@ if __name__ == "__main__":
 # {} its a set, a list of values that can't be repeated.
 # {:} its a dictionary, a list of values that can't be repeated and can be accessed by a key.
 # Python list documentation: https://docs.python.org/3/tutorial/datastructures.html#more-on-lists
+# List comprehension. It's a way to create a list in a single line of code.
